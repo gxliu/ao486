@@ -947,7 +947,9 @@ int main() {
 
 	alt_irq_disable_all();
 	
-	//release reset - start executing
+	runtime_menu();
+	
+	//reset cycle - start executing
 	IOWR(PIO_OUTPUT_BASE, 0, 0x00);
 	
 	while(true) {
